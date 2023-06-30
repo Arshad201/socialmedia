@@ -1,5 +1,5 @@
 {
-  "name": "Social Media API",
+  "name": "social_media_api",
   "version": "1.0.0",
   "description": "This is Just a Practise coding of Express js error handling.",
   "main": "server.js",
