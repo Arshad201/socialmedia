@@ -1,0 +1,24 @@
+.welcome{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.welcomeImg{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: 0.4rem solid var(--blue);
+}
+.welcomeHeading{
+    font-family: poppins;
+    font-size: 3rem;
+    color: var(--blue);
+}
+.designHeading{
+    font-family: cursive;
+    color: rgb(255, 69, 69);;
+}

@@ -1,0 +1,243 @@
+.modalContainer{
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.509);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 0rem 0.5rem; */
+}
+.modalBox{
+    max-width: 95%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.7rem;
+    box-shadow: 1px 1px 3px black;
+}
+
+.modalImg{
+    width: 5rem;
+}
+.question{
+    font-size: 1.7rem;
+    font-family: poppins;
+}
+.fileInput{
+    display: none;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.7rem;
+    flex-wrap: wrap;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-family: poppins;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.442);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.btn:first-child{
+    background-color: var(--blue);
+}
+.btn:last-child{
+    background-color: rgb(255, 69, 69);
+}
+
+.alert{
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    color: var(--white);
+    font-family: poppins;
+    border-radius: .5rem;
+    z-index: 3;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.541);
+}
+.alert span{
+    display: flex;
+    align-items: center;
+}
+.alertIcon{
+    font-size: 1.8rem;
+}
+
+.formBoxHead{
+    font-family: poppins;
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    font-weight: 500;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px black;
+    margin: 0.5rem 0rem;
+}
+
+.formHeadIcon{
+    font-size: 2.5rem;
+}
+
+.formBox{
+    margin: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.infoInput{
+    border: 1px solid black;
+    outline: none;
+    font-size: 1.3rem;
+    padding:0.5rem 1rem;
+    font-family: poppins;
+    width: 100%;
+}
+.select{
+    background-color: var(--white);
+    color: var(--black);
+}
+.label{
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--blue);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.179);
+    font-family: poppins;
+}
+
+.pagination{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.number{
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.442);
+    background-color: var(--blue);
+    color: var(--white);
+    height: 3.5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-family: poppins;
+    border-radius: 10rem;
+    position: relative;
+}
+.activeForm{
+    background-color: rgb(255, 69, 69);
+}
+
+.removeIcon{
+    background-color: rgb(255, 69, 69);
+    position: absolute;
+    right: -20%;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.442);
+}
+.btnIcon{
+    color: var(--white);
+    font-size: 2rem;
+}
+.settingContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.setting{
+    font-family: poppins;
+    text-align: left;
+    padding: 1rem 2rem;
+    border-radius: 0%;
+    letter-spacing: .03rem;
+    border: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.384);
+    cursor: pointer;
+    transition: .1s ease-in-out;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.setting:hover{
+    background-color: var(--blue);
+    color: var(--white);
+    transition: .1s ease-in-out;
+}
+.blockIcon{
+    color: rgb(255, 69, 69) !important;
+}
+
+/* User List e.g, Block List Friend list */
+.users{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 60vh;
+}
+.user{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.03);
+    gap: 1.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    margin: 1rem;
+    font-family: poppins;
+}
+.usersList{
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.userImg{
+    width: 8rem;
+}
+.listBtn{
+   padding: 0.7rem 1.5rem;
+   letter-spacing: .2px;
+}
+.tickBox{
+    border: 2px solid var(--black);
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.tickIcon, .clickIcon{
+    color: rgb(255, 69, 69);
+    font-size: 3rem;
+}
