@@ -28,7 +28,7 @@ const FriendCard = ({user, loadAgain, setLoadAgain}) => {
                 }
             }
 
-            const { data } = await axios.post(`${baseUrl}/api/v1/send/friendrequest/${id}`, {}, config);
+            const { data } = await axios.post(`${baseUrl}api/v1/send/friendrequest/${id}`, {}, config);
             setLoadingBtn1({...loadingBtn1, [id]:false});
             callAlert(setAlert, setShowAlert, 'success', data.message);
             setLoadAgain(!loadAgain);
@@ -52,7 +52,7 @@ const FriendCard = ({user, loadAgain, setLoadAgain}) => {
                }
            }
 
-           const { data } = await axios.post(`${baseUrl}/api/v1/undo/friendrequest/${id}`, {}, config);
+           const { data } = await axios.post(`${baseUrl}api/v1/undo/friendrequest/${id}`, {}, config);
            setLoadingBtn1({...loadingBtn1, [id]:false});
            callAlert(setAlert, setShowAlert, 'success', data.message);
            setLoadAgain(!loadAgain);
@@ -76,7 +76,7 @@ const FriendCard = ({user, loadAgain, setLoadAgain}) => {
                }
            }
 
-           const { data } = await axios.post(`${baseUrl}/api/v1/accept/friendr/${id}`, {}, config);
+           const { data } = await axios.post(`${baseUrl}api/v1/accept/friendr/${id}`, {}, config);
            setLoadingBtn1({...loadingBtn1, [id]:false});
            callAlert(setAlert, setShowAlert, 'success', data.message);
            setLoadAgain(!loadAgain);
@@ -101,7 +101,7 @@ const FriendCard = ({user, loadAgain, setLoadAgain}) => {
                }
            }
 
-           const { data } = await axios.post(`${baseUrl}/api/v1/reject/friendr/${id}`, {}, config);
+           const { data } = await axios.post(`${baseUrl}api/v1/reject/friendr/${id}`, {}, config);
            setLoadingBtn2({...loadingBtn2, [id]:false});
            callAlert(setAlert, setShowAlert, 'success', data.message);
            setLoadAgain(!loadAgain);
@@ -126,7 +126,7 @@ const FriendCard = ({user, loadAgain, setLoadAgain}) => {
                }
            }
 
-           const { data } = await axios.post(`${baseUrl}/api/v1/remove/friend/${id}`, {}, config);
+           const { data } = await axios.post(`${baseUrl}api/v1/remove/friend/${id}`, {}, config);
            setLoadingBtn1({...loadingBtn1, [id]:false});
            callAlert(setAlert, setShowAlert, 'success', data.message);
            setLoadAgain(!loadAgain);

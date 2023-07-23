@@ -38,7 +38,7 @@ const CreatePost = () => {
             'token': token
           }
         }
-        const { data } = await axios.post(`${baseUrl}/api/v2/create/post`, {...myFinalObj}, config);
+        const { data } = await axios.post(`${baseUrl}api/v2/create/post`, {...myFinalObj}, config);
   
         callAlert(setAlert, setShowAlert, 'success', data.message);
         setLoading(false);

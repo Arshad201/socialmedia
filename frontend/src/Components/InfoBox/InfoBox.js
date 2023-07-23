@@ -30,7 +30,7 @@ const InfoBox = ({user, id}) => {
         }
       }
        
-      const { data } = await axios.get(`${baseUrl}/api/v1/get/info/${id}`, config);
+      const { data } = await axios.get(`${baseUrl}api/v1/get/info/${id}`, config);
       
       setInfo(data.userInfo);
 
@@ -63,7 +63,7 @@ const InfoBox = ({user, id}) => {
             bio : bioText 
           }
 
-          const { data } = await axios.put(`${baseUrl}/api/v1/update/profile/`, body, config);
+          const { data } = await axios.put(`${baseUrl}api/v1/update/profile/`, body, config);
 
           setBioText(data.updatedUser.bio);
           setLoadPP(!loadPP);

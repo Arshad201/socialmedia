@@ -66,7 +66,7 @@ const ProfileImages = ({user, paramId}) => {
           avatar : avatar 
         }
 
-        await axios.put(`${baseUrl}/api/v1/update/profile/`, body, config);
+        await axios.put(`${baseUrl}api/v1/update/profile/`, body, config);
 
         setLoadPP(!loadPP);
         setLoadLP(!loadLP)
@@ -130,7 +130,7 @@ const ProfileImages = ({user, paramId}) => {
           coverPic : coverPic 
         }
 
-        await axios.put(`${baseUrl}/api/v1/update/profile/`, body, config);
+        await axios.put(`${baseUrl}api/v1/update/profile/`, body, config);
 
         setLoadPP(!loadPP);
         setIsUpload(false);
@@ -183,7 +183,7 @@ const ProfileImages = ({user, paramId}) => {
             }
           }
           
-          const { data } = await axios.delete(`${baseUrl}/api/v1/delete/profile/${password}`, config);
+          const { data } = await axios.delete(`${baseUrl}api/v1/delete/profile/${password}`, config);
 
           callAlert(setAlert, setShowAlert, 'error', data.message);
           setLoading(false);
@@ -222,7 +222,7 @@ const ProfileImages = ({user, paramId}) => {
           }
         }
         
-        await axios.put(`${baseUrl}/api/v1/block/${paramId}`, {}, config);
+        await axios.put(`${baseUrl}api/v1/block/${paramId}`, {}, config);
         setLoadLP(!loadLP);
         setShowBlockModal(false)
         navigate(`/profile/${userId}`)
@@ -289,7 +289,7 @@ const ProfileImages = ({user, paramId}) => {
           }
         }
 
-        await axios.post(`${baseUrl}/api/v1/create/info`, finalData, config);
+        await axios.post(`${baseUrl}api/v1/create/info`, finalData, config);
         setLoading(false);
         setCreateInfoModal(false);
         setShowSettingModal(false);

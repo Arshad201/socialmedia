@@ -22,7 +22,7 @@ const Friends = () => {
         }
       }
        
-      const { data } = await axios.get(`${baseUrl}/api/v1/users`, config);
+      const { data } = await axios.get(`${baseUrl}api/v1/users`, config);
       setUsers(data.users);
       setLoading(false);
       

@@ -22,7 +22,7 @@ const PostCard = ({post}) => {
         }
       }
 
-      const { data } = await axios.delete(`${baseUrl}/api/v2/delete/post/${id}`, config);
+      const { data } = await axios.delete(`${baseUrl}api/v2/delete/post/${id}`, config);
       setLoadPost(!loadPost)
       callAlert(setAlert, setShowAlert, 'success', data.message);
 

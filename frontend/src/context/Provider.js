@@ -38,10 +38,13 @@ const StateProvider = ( { children }) =>{
               'token': token
             }
           }
-          const { data } = await axios.get(`${baseUrl}/api/v1/get/profile/${userId}`, config)
+          const { data } = await axios.get(`${baseUrl}api/v1/get/profile/${userId}`, config)
           setLoginProfile(data.user);
           setProfileLoading(false);
         } catch (error) {
+          // if(error){
+          //   setAuth(false);
+          // }
           setProfileLoading(false);
         }
       }
@@ -56,7 +59,7 @@ const StateProvider = ( { children }) =>{
 
         fetchLoginProfile();
         
-    },[loadLP]); 
+    },[loadLP, auth]); 
 
     return <AppContext.Provider value={{auth, setAuth, showAlert, setShowAlert, alert, setAlert, loggedInData, setLoggedInData, token, userId, baseUrl, loginProfile, setLoginProfile, info, setInfo, loadLP, setLoadLP, loadPP,setLoadPP, loadIF,setLoadIF, loadPost,setLoadPost, profileLoading}}>{children}</AppContext.Provider> 
 }

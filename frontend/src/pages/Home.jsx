@@ -4,14 +4,12 @@ import WelcomeSkeleton from '../Components/Welcome/WelcomeSkeleton.jsx'
 import PostCard from '../Components/PostCard/PostCard.jsx';
 import axios from 'axios';
 import { AppState } from '../context/Provider.js';
-import { callAlert } from '../Functions/Functions.js';
 import PostCardSkeleton from '../Components/PostCard/PostCardSkeleton.jsx';
 
 const Home = () => {
 
-  const { baseUrl, token, userId, setAlert, setShowAlert, loadPost, loginProfile, profileLoading} = AppState();
+  const { baseUrl, token, loadPost, loginProfile, profileLoading} = AppState();
   const [posts, setPosts] = useState([])
-  const [myProfile, setMyProfile] = useState({});
   const [postLoading, setPostLoading] = useState(false);
 
   const fetchPosts = async() =>{
@@ -26,7 +24,7 @@ const Home = () => {
             'token': token
           }
         }
-        const { data } = await axios.get(`${baseUrl}/api/v2/get/posts`, config);
+        const { data } = await axios.get(`${baseUrl}api/v2/get/posts`, config);
   
         setPosts(data.posts);
         setPostLoading(false);

@@ -26,7 +26,7 @@ const UserListModal = ({tagList, setTagList , setModal, listPurpose, listType, b
         }
       }
 
-      const { data } = await axios.post(`${baseUrl}/api/v1/remove/friend/${id}`, {}, config);
+      const { data } = await axios.post(`${baseUrl}api/v1/remove/friend/${id}`, {}, config);
 
       setUserList(data.users);
       setLoadingBtn({...loading, [id]:false});
@@ -52,7 +52,7 @@ const UserListModal = ({tagList, setTagList , setModal, listPurpose, listType, b
         }
       }
 
-      const { data } = await axios.put(`${baseUrl}/api/v1/unblock/${id}`, {}, config);
+      const { data } = await axios.put(`${baseUrl}api/v1/unblock/${id}`, {}, config);
 
       setUserList(data.users);
       setLoadingBtn({...loading, [id]:false});
@@ -72,10 +72,10 @@ const UserListModal = ({tagList, setTagList , setModal, listPurpose, listType, b
     var url;
 
     if(listType === 'Block List'){
-      url = `${baseUrl}/api/v1/blocklist`;
+      url = `${baseUrl}api/v1/blocklist`;
     }
     if(listType === 'Friend List'){
-      url = `${baseUrl}/api/v1/friendlist`;
+      url = `${baseUrl}api/v1/friendlist`;
     }
 
     setLoading(true);

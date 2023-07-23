@@ -25,7 +25,7 @@ const Profile = () => {
           'token': token
         }
       }
-      const { data } = await axios.get(`${baseUrl}/api/v1/get/profile/${params.id}`, config)
+      const { data } = await axios.get(`${baseUrl}api/v1/get/profile/${params.id}`, config)
       setUser(data.user);
       setLoading(false);
     } catch (error) {
